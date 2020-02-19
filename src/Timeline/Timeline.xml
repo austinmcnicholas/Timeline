@@ -1,0 +1,84 @@
+<widget id="Timeline.widget.Timeline" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Timeline</name>
+    <description>Dummy widget</description>
+    <icon/>
+    <properties>
+        <property key="entity" type="entity" required="true" defaultValue="" allowNonPersistableEntities="true">
+            <caption>Helper object</caption>
+            <category>Data</category>
+            <description>the entity that holds the association to view a selected record</description>
+        </property>
+        <property key="viewReference" type="entity" required="true" entityProperty="entity" isPath="yes" pathType="reference" allowNonPersistableEntities="true">
+            <caption>reference</caption>
+            <category>Data</category>
+            <description>the helper reference to set to view details in a dataview </description>
+        </property>
+        <property key="timeline" type="entity" required="true" defaultValue="" allowNonPersistableEntities="true">
+            <caption>timeline object</caption>
+            <category>Data</category>
+            <description>the entity that holds the information for each record in the timeline</description>
+        </property>
+        <property key="caption" type="attribute" required="true" defaultValue="" entityProperty="timeline">
+            <caption>Caption</caption>
+            <category>Data</category>
+            <description>The attribute that holds the caption of the timeline (appears below each circle)</description>
+            <attributeTypes>
+                         <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="title" type="attribute" required="false" defaultValue="" entityProperty="timeline">
+            <caption>Caption</caption>
+            <category>Data</category>
+            <description>The attribute that holds the name of each record in the timeline (appears above each circle)</description>
+            <attributeTypes>
+                         <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="fontAwesomeFlag" type="boolean" required="true" defaultValue="false">
+            <caption>Use Icon?</caption>
+            <category>Data</category>
+            <description>optionally use a font awesome icon as your title</description>
+        </property>
+        <property key="icon" type="string" required="false" defaultValue="\f0d1">
+            <caption>Font Awesome Icon</caption>
+            <category>Data</category>
+            <description>The font awesome unicode to add to the timeline</description>
+        </property>
+        <property key="microflow" type="microflow" required="true" defaultValue="">
+            <caption>datasource</caption>
+            <category>Data</category>
+            <description>microflow to retrieve the data</description>
+            <returnType type="Object" isList="true" entityProperty="timeline" />
+        </property>
+        <property key="width" type="integer" defaultValue="80">
+            <caption>Width</caption>
+            <category>CSS Properties</category>
+            <description>The width of the timeline (in vh)</description>
+        </property>
+        <property key="maxWidth" type="integer" defaultValue="1000">
+            <caption>Max Width</caption>
+            <category>CSS Properties</category>
+            <description>The max width of the timeline (in pixels)</description>
+        </property>
+        <property key="dotWidth" type="integer" defaultValue="25">
+            <caption>Dot Width</caption>
+            <category>CSS Properties</category>
+            <description>The  width of each dot in the timeline (in pixels)</description>
+        </property>
+        <property key="dotWidthSm" type="integer" defaultValue="17">
+            <caption>Dot Width - smaller</caption>
+            <category>CSS Properties</category>
+            <description>The width of each dot in the timeline when a media query is being used on a smaller screen (in pixels)</description>
+        </property>
+        <property key="colorActive" type="string" defaultValue="#2C3E50">
+            <caption>Active color</caption>
+            <category>CSS Properties</category>
+            <description>The color of the timeline when a record is active</description>
+        </property>
+                <property key="colorInactive" type="string" defaultValue="#2C3E50">
+            <caption>Inactive color</caption>
+            <category>CSS Properties</category>
+            <description>The color of the timeline when a record is inactive.</description>
+        </property>
+    </properties>
+</widget>

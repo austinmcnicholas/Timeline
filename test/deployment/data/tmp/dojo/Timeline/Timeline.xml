@@ -1,0 +1,36 @@
+<widget id="Timeline.widget.Timeline" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>Timeline</name>
+    <description>Dummy widget</description>
+    <icon/>
+    <properties>
+        <property key="entity" type="entity" required="true" defaultValue="" allowNonPersistableEntities="true">
+            <caption>Helper object</caption>
+            <category>Data</category>
+            <description>the entity that holds the association to view a selected record</description>
+        </property>
+        <property key="viewReference" type="entity" required="true" entityProperty="entity" isPath="yes" pathType="reference" allowNonPersistableEntities="true">
+            <caption>reference</caption>
+            <category>Data</category>
+            <description>the helper reference to set to view details in a dataview </description>
+        </property>
+        <property key="timeline" type="entity" required="true" defaultValue="" allowNonPersistableEntities="true">
+            <caption>timeline object</caption>
+            <category>Data</category>
+            <description>the entity that holds the information for each record in the timeline</description>
+        </property>
+        <property key="caption" type="attribute" required="true" defaultValue="" entityProperty="timeline">
+            <caption>Caption</caption>
+            <category>Data</category>
+            <description>The attribute that holds the caption of the timeline (appears below each circle)</description>
+            <attributeTypes>
+                         <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="microflow" type="microflow" required="true" defaultValue="">
+            <caption>datasource</caption>
+            <category>Data</category>
+            <description>microflow to retrieve the data</description>
+            <returnType type="Object" isList="true" entityProperty="timeline" />
+        </property>
+    </properties>
+</widget>

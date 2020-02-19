@@ -1,0 +1,12 @@
+Buildfile: C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment\build_core.xml
+
+compile:
+    [javac] Compiling 63 source files to C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment\run\bin
+
+package:
+      [jar] Building jar: C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment\model\bundles\project.jar
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+
+

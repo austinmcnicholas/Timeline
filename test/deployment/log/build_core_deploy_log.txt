@@ -1,0 +1,9 @@
+Buildfile: C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 32 files to C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

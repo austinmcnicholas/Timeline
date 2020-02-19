@@ -1,0 +1,9 @@
+Buildfile: C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment\build_core.xml
+
+clean:
+   [delete] Deleting directory C:\Users\amcnicholas\Desktop\timeline_v2\test\deployment\model
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+
